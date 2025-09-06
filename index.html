@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weightlifting Buddy - Your Personal Gym Guide</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-dumbbell"></i>
+                <h1>Weightlifting Buddy</h1>
+            </div>
+            <p class="tagline">Your friendly guide to strength training 💪</p>
+        </header>
+
+        <main class="main-content">
+            <!-- Welcome Section -->
+            <section class="welcome-section" id="welcomeSection">
+                <div class="welcome-card">
+                    <h2>Welcome to Your Fitness Journey! 🌟</h2>
+                    <p>Don't worry, everyone starts somewhere! We're here to make weightlifting approachable and fun for you.</p>
+                    <div class="encouragement-tips">
+                        <div class="tip">
+                            <i class="fas fa-heart"></i>
+                            <span>Start light - form matters more than weight</span>
+                        </div>
+                        <div class="tip">
+                            <i class="fas fa-star"></i>
+                            <span>Progress is personal - go at your own pace</span>
+                        </div>
+                        <div class="tip">
+                            <i class="fas fa-users"></i>
+                            <span>You're not alone - we're here to support you</span>
+                        </div>
+                    </div>
+                    <button class="cta-button" onclick="showGoalForm()">
+                        Let's Create Your Routine! <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </section>
+
+            <!-- Goal Form Section -->
+            <section class="goal-form-section" id="goalFormSection" style="display: none;">
+                <div class="form-card">
+                    <h2>Tell Us About Your Goals</h2>
+                    <p>This helps us create the perfect routine for you</p>
+                    
+                    <form id="goalForm">
+                        <div class="form-group">
+                            <label for="experience">What's your experience level?</label>
+                            <select id="experience" required>
+                                <option value="">Select your level</option>
+                                <option value="complete-beginner">Complete beginner (never lifted weights)</option>
+                                <option value="some-experience">Some experience (1-6 months)</option>
+                                <option value="intermediate">Intermediate (6+ months)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="goals">What are your main goals?</label>
+                            <div class="checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="goals" value="strength">
+                                    <span class="checkmark"></span>
+                                    Build strength
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="goals" value="muscle-tone">
+                                    <span class="checkmark"></span>
+                                    Muscle tone & definition
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="goals" value="weight-loss">
+                                    <span class="checkmark"></span>
+                                    Weight loss
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="goals" value="confidence">
+                                    <span class="checkmark"></span>
+                                    Build confidence
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="goals" value="general-fitness">
+                                    <span class="checkmark"></span>
+                                    General fitness
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="frequency">How many days per week can you work out?</label>
+                            <select id="frequency" required>
+                                <option value="">Select frequency</option>
+                                <option value="2">2 days per week</option>
+                                <option value="3">3 days per week</option>
+                                <option value="4">4 days per week</option>
+                                <option value="5">5 days per week</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="sessionLength">How long can you spend per workout?</label>
+                            <select id="sessionLength" required>
+                                <option value="">Select duration</option>
+                                <option value="20">20 minutes</option>
+                                <option value="30">30 minutes</option>
+                                <option value="45">45 minutes</option>
+                                <option value="60">60 minutes</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="equipment">What equipment do you have access to?</label>
+                            <div class="checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="equipment" value="bodyweight">
+                                    <span class="checkmark"></span>
+                                    Bodyweight only
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="equipment" value="dumbbells">
+                                    <span class="checkmark"></span>
+                                    Dumbbells
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="equipment" value="barbell">
+                                    <span class="checkmark"></span>
+                                    Barbell
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="equipment" value="resistance-bands">
+                                    <span class="checkmark"></span>
+                                    Resistance bands
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="equipment" value="gym-access">
+                                    <span class="checkmark"></span>
+                                    Full gym access
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="intensity">What intensity level feels right for you?</label>
+                            <div class="radio-group">
+                                <label class="radio-label">
+                                    <input type="radio" name="intensity" value="gentle">
+                                    <span class="radio-mark"></span>
+                                    Gentle (ease into it)
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="intensity" value="moderate">
+                                    <span class="radio-mark"></span>
+                                    Moderate (challenging but comfortable)
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="intensity" value="intense">
+                                    <span class="radio-mark"></span>
+                                    Intense (ready to push myself)
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="button" class="secondary-button" onclick="showWelcome()">
+                                <i class="fas fa-arrow-left"></i> Back
+                            </button>
+                            <button type="submit" class="primary-button">
+                                Generate My Routine <i class="fas fa-magic"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Workout Routine Section -->
+            <section class="workout-section" id="workoutSection" style="display: none;">
+                <div class="workout-header">
+                    <h2>Your Personalized Workout Routine</h2>
+                    <p>Remember: Start light, focus on form, and listen to your body! 💪</p>
+                </div>
+                
+                <div class="workout-container" id="workoutContainer">
+                    <!-- Workout routine will be generated here -->
+                </div>
+
+                <div class="workout-actions">
+                    <button class="secondary-button" onclick="showGoalForm()">
+                        <i class="fas fa-edit"></i> Modify Goals
+                    </button>
+                    <button class="primary-button" onclick="startWorkout()">
+                        <i class="fas fa-play"></i> Start Workout
+                    </button>
+                </div>
+            </section>
+
+            <!-- Workout Timer Section -->
+            <section class="timer-section" id="timerSection" style="display: none;">
+                <div class="timer-card">
+                    <h3 id="currentExercise">Current Exercise</h3>
+                    <div class="timer-display">
+                        <div class="time-circle">
+                            <span id="timerDisplay">00:00</span>
+                        </div>
+                    </div>
+                    <div class="timer-controls">
+                        <button id="startTimer" class="timer-button start">
+                            <i class="fas fa-play"></i> Start
+                        </button>
+                        <button id="pauseTimer" class="timer-button pause" disabled>
+                            <i class="fas fa-pause"></i> Pause
+                        </button>
+                        <button id="resetTimer" class="timer-button reset">
+                            <i class="fas fa-redo"></i> Reset
+                        </button>
+                    </div>
+                    <div class="exercise-info">
+                        <p id="exerciseInstructions">Exercise instructions will appear here</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progressFill"></div>
+                        </div>
+                        <p class="progress-text" id="progressText">Exercise 1 of 8</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>Remember: Every expert was once a beginner. You've got this! 🌟</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
