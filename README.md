@@ -29,7 +29,7 @@ A beginner-friendly web application that creates personalized workout routines t
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/weightlifting-buddy-app.git
+   git clone https://github.com/detri19/weightlifting-buddy-app.git
    cd weightlifting-buddy-app
    ```
 
@@ -165,15 +165,16 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 Having trouble? Here are some ways to get help:
 
 - 📧 **Email**: [your-email@example.com]
-- 🐛 **Issues**: [GitHub Issues](https://github.com/yourusername/weightlifting-buddy-app/issues)
-- 💬 **Discussions**: [GitHub Discussions](https://github.com/yourusername/weightlifting-buddy-app/discussions)
+- 🐛 **Issues**: [GitHub Issues](https://github.com/detri19/weightlifting-buddy-app/issues)
+- 💬 **Discussions**: [GitHub Discussions](https://github.com/detri19/weightlifting-buddy-app/discussions)
 
 ## 🌟 Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=yourusername/weightlifting-buddy-app&type=Date)](https://star-history.com/#yourusername/weightlifting-buddy-app&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=detri19/weightlifting-buddy-app&type=Date)](https://star-history.com/#detri19/weightlifting-buddy-app&Date)
 
 ---
 
 **Remember**: Every expert was once a beginner. You've got this! 🌟
 
 *Made with ❤️ for the fitness community*
+
